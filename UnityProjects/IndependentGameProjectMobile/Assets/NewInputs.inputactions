@@ -1,0 +1,164 @@
+{
+    "version": 1,
+    "name": "NewInputs",
+    "maps": [
+        {
+            "name": "New action map",
+            "id": "c160d924-601a-4d87-b9d4-af1503952f24",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "67bbdb22-55d4-41ff-8187-7ad5b234e763",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "40ce240d-5b5f-4386-811e-b91060024d68",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "New action map1",
+            "id": "063404a6-cc22-4c74-8045-806d7cb5e2a5",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "82f0b0ef-ef2f-4759-b1cd-227162354c94",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "f8ce1f44-bbe8-4332-9e97-d55468dfcbd5",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "New action map2",
+            "id": "6e5455c4-9a07-4898-9f79-12840a717162",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "9947379a-e6af-497f-86b8-a6463b65d985",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "dbce51d4-3f83-4d99-ac40-a1713030d020",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "New action map3",
+            "id": "24403987-bb28-4cc2-b28f-4ea92af31afa",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "f7180677-d962-4dbc-b74a-acc22ee6fa5e",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "d7d7d1ca-ff57-4f03-b60a-329b0e4b59d1",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "New action map4",
+            "id": "f5ca75e0-feb8-4e94-8867-cf0a90a49572",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "1c116782-a56d-49f6-bfb4-f1bee2d9eda7",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "2344185d-508f-477d-9bae-389e8aaca848",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "MobileDebug",
+            "bindingGroup": "MobileDebug",
+            "devices": [
+                {
+                    "devicePath": "<Keyboard>",
+                    "isOptional": false,
+                    "isOR": false
+                },
+                {
+                    "devicePath": "<Keyboard>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
+}
