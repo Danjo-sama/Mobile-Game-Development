@@ -1,7 +1,11 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerControl : MonoBehaviour
 {
+    InputAction moveAction;
+    InputAction bagAction;
+
     public float horizontalInput;
     public float moveForce = 0.03f;
     public bool onGround;
@@ -21,6 +25,12 @@ public class PlayerControl : MonoBehaviour
             onGround = true;
         }
 
+    }
+
+    void Start()
+    {
+        moveAction = InputSystem.actions.FindAction("Move");
+        bagAction = InputSystem.actions.FindAction("OpenBag");
     }
 
     // Update is called once per frame
