@@ -36,18 +36,18 @@ public class PlayerControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        horizontalInput = Input.GetAxis("Horizontal");
-        if (horizontalInput > 0 )
+        Vector2 move = moveAction.ReadValue<Vector2>();
+        if (move == Vector2.right)
         {
             GetComponent<Rigidbody2D>().AddForceX(moveForce, ForceMode2D.Impulse); // Using an AddForce system to make the player slide on the road to give an effect of acceleration on a road
         }
 
-        if (horizontalInput < 0)
+        if (move == Vector2.left)
         {
             GetComponent<Rigidbody2D>().AddForceX(-moveForce, ForceMode2D.Impulse);
         }
 
-        if (Input.GetButton("Fire1"))
+        if (bagAction.IsPressed())
         {
             animator.SetBool("IsOpen", true); //send signal to set the player sprite to the open bag while Fire1 is held
         }
@@ -59,14 +59,14 @@ public class PlayerControl : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (Input.GetButton("Fire1") && collision.gameObject.CompareTag("Money"))
+        if (bagAction.IsPressed() && collision.gameObject.CompareTag("Money"))
         {
             Destroy(collision.gameObject);
             audioSource.PlayOneShot(moneySound);
             GameManager.instance.AddScore(100); //call the instance of GameManager script to add 100 to the score
         }
 
-        if (Input.GetButton("Fire1") && collision.gameObject.CompareTag("Obstacle"))
+        if (bagAction.IsPressed() && collision.gameObject.CompareTag("Obstacle"))
         {
             Destroy(collision.gameObject);
             audioSource.PlayOneShot(explosionSound);
