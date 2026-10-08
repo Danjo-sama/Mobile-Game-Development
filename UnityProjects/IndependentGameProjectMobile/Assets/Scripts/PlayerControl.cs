@@ -36,13 +36,13 @@ public class PlayerControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector2 move = moveAction.ReadValue<Vector2>();
-        if (move == Vector2.right)
+        Vector2 _moveAction = moveAction.ReadValue<Vector2>();
+        if (_moveAction == Vector2.right)
         {
             GetComponent<Rigidbody2D>().AddForceX(moveForce, ForceMode2D.Impulse); // Using an AddForce system to make the player slide on the road to give an effect of acceleration on a road
         }
 
-        if (move == Vector2.left)
+        if (_moveAction == Vector2.left)
         {
             GetComponent<Rigidbody2D>().AddForceX(-moveForce, ForceMode2D.Impulse);
         }
