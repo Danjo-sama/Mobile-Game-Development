@@ -1,0 +1,4 @@
+Save Data keeping:
+High Score, Currency, Skins, 
+Device Settings:
+Volume, Graphics, Haptics, 
