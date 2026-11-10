@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
     public InputActionReference tapAction;
 
     private bool isAtTop = false;
-    private bool isBlocked = false;
+    private bool onPlatform = false;
 
     private float topY;
     private float fixedX;
@@ -56,14 +56,18 @@ public class PlayerMovement : MonoBehaviour
 
     void OnTap(InputAction.CallbackContext context)
     {
-        isAtTop = !isAtTop;
+        if (onPlatform)
+        {
+            isAtTop = !isAtTop;
 
-        isBlocked = false;
+            onPlatform = false;
+        }
+        
     }
 
     void FixedUpdate()
     {
-        if (isBlocked)
+        if (onPlatform)
             return;
 
         float direction = isAtTop ? 1f : -1f;
@@ -80,7 +84,15 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Platform"))
         {
-            isBlocked = true;
+            onPlatform = true;
+        }
+    }
+
+    void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Platform"))
+        {
+            onPlatform = false;
         }
     }
 }
