@@ -26,6 +26,6 @@ public class GameManager : MonoBehaviour
             timeSinceLastIncrease = 0f;
         }
 
-        distanceText.text = $"Distance: {Mathf.FloorToInt(distanceTravelled)}";
+        distanceText.text = $"Distance: {Mathf.FloorToInt(distanceTravelled)}m";
     }
 }
