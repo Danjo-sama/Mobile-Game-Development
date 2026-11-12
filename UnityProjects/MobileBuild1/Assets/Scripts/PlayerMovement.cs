@@ -59,6 +59,7 @@ public class PlayerMovement : MonoBehaviour
         if (onPlatform)
         {
             isAtTop = !isAtTop;
+            Handheld.Vibrate();
 
             onPlatform = false;
         }
