@@ -86,6 +86,7 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("Platform"))
         {
             onPlatform = true;
+            ProgressStore.Instance.Tracker.OnEnemyDefeated();
         }
     }
 
